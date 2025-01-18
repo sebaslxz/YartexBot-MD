@@ -14,7 +14,7 @@ import { platform } from 'process'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
-global.owner = [
+global.owner = [ zoro
 ['5493873687620', '✨ YartexBot-MD', true],
 ['593968263524'],
 ['5214434703586'],
